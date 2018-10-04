@@ -1,4 +1,3 @@
-#!/usr/bin/python2
 import sys
 import socket 
  
@@ -35,6 +34,8 @@ def ping(ip_address):
         return True
     except:
         return False
+    finally:
+        sock.close()
 
 def get_ip_address(host):
     '''

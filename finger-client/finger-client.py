@@ -6,10 +6,11 @@ FINGER_PROTOCOL_PORT= 79
 
 def finger(ip_address, args=""):
     '''
-    Ping an ip address.
+    Send finger request to an ip address.
 
     Args:
         ip_address (string): IP Address
+        args (string): Finger args
     
     Returns:
         bool: True for node details, False otherwise.
@@ -40,6 +41,8 @@ def finger(ip_address, args=""):
         return True
     except:
         return False
+    finally:
+        sock.close()
 
 def get_ip_address(host):
     '''
