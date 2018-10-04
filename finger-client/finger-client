@@ -42,7 +42,7 @@ def finger(ip_address, args=""):
         return True
     except:
         return False
-    finally
+    finally:
         sock.close()
 
 def get_ip_address(host):
