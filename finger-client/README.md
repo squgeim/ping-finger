@@ -25,7 +25,3 @@ Source code:
 ```bash
 $ python2 finger-client.py
 ```
-
-Submitted by:
-* JID: J00627938
-* Name: Deepak Adhikari
