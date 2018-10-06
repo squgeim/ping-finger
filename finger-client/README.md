@@ -10,18 +10,18 @@ $ chod +x finger-client # If the file is not executable
 
 Executable
 ```bash
-$ ./finger-client 
+$ ./finger-client
 $ ./finger-client [user]
 $ ./finger-client [user@host]
 ```
 
 How to make executable:
-* Add line "#!/usr/bin/python2" in the first line of "finger-client" file 
-* Remove extension ".py" from file name
-* Make file excutable with command "chomd +x finger-client"
+* Add line __#!/usr/bin/python2__ in the first line of __finger-client__ file
+* Remove extension __.py__ from file name
+* Make file excutable with command __chomd +x finger-client__
 
 Source code:
-* Python source code can be found in "finger-client.py" file
+* Python source code can be found in __finger-client.py__ file
 ```bash
 $ python2 finger-client.py
 ```

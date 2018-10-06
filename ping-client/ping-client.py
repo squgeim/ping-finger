@@ -1,6 +1,6 @@
 import sys
-import socket 
- 
+import socket
+
 ECHO_SERVER_PORT = 7
 
 
@@ -10,26 +10,26 @@ def ping(ip_address):
 
     Args:
         ip_address (string): IP Address
-    
+
     Returns:
         bool: True for success, False otherwise.
     '''
 
-    MESSAGE = "ping" 
+    MESSAGE = "ping"
     BUFFER_SIZE = 1024
-     
+
     try:
         # Create a socket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-        
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
         # Connect to the IP address and port
         sock.connect((ip_address, ECHO_SERVER_PORT))
-        
+
         # Send echo message
-        sock.sendall(MESSAGE) 
-        
+        sock.sendall(MESSAGE)
+
         # Wait for the response
-        response = sock.recv(BUFFER_SIZE) 
+        response = sock.recv(BUFFER_SIZE)
 
         return True
     except:
@@ -39,7 +39,7 @@ def ping(ip_address):
 
 def get_ip_address(host):
     '''
-    Resolve IP address of a host 
+    Resolve IP address of a host
 
     Args:
         host (string): Host name
@@ -52,7 +52,7 @@ def get_ip_address(host):
 
         if len(addr_info) == 0:
             return False
-        
+
         return addr_info[0][4][0]
     except:
         return False
@@ -69,6 +69,3 @@ if __name__ == "__main__":
         print host + " is alive"
     else:
         print host + " is unreachable"
-
-
-

@@ -1,6 +1,6 @@
 import sys
-import socket 
- 
+import socket
+
 FINGER_PROTOCOL_PORT= 79
 
 
@@ -11,17 +11,17 @@ def finger(ip_address, args=""):
     Args:
         ip_address (string): IP Address
         args (string): Finger args
-    
+
     Returns:
         bool: True for node details, False otherwise.
     '''
 
     BUFFER_SIZE = 1024
-     
+
     try:
         # Create a socket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-        
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
         # Connect to the IP address and port
         sock.connect((ip_address, FINGER_PROTOCOL_PORT))
 
@@ -37,7 +37,7 @@ def finger(ip_address, args=""):
             sys.stdout.write(buffer)
 
         sys.stdout.flush()
-            
+
         return True
     except:
         return False
@@ -46,7 +46,7 @@ def finger(ip_address, args=""):
 
 def get_ip_address(host):
     '''
-    Resolve IP address of a host 
+    Resolve IP address of a host
 
     Args:
         host (string): Host name
@@ -59,7 +59,7 @@ def get_ip_address(host):
 
         if len(addr_info) == 0:
             return False
-        
+
         return addr_info[0][4][0]
     except:
         return False
@@ -74,7 +74,7 @@ if __name__ == "__main__":
         args = ""
     elif len(sys.argv) == 2:
         connection = sys.argv[1].split('@')
-        
+
         if len(connection) == 1:
             host = "127.0.0.1"
             args = sys.argv[1]
@@ -82,9 +82,9 @@ if __name__ == "__main__":
             host = connection[1]
             args = connection[0]
         else:
-            print "Error: invalid parameter" 
+            print "Error: invalid parameter"
             sys.exit()
-    
+
     ip_address = get_ip_address(host)
 
     response = finger(ip_address, args)
@@ -93,6 +93,3 @@ if __name__ == "__main__":
         print "Error! could not fetch details"
     else:
         print response
-
-
-

@@ -14,7 +14,7 @@ $ ./ping-client destination
 ```
 
 How to make executable:
-* Add line __#!/usr/bin/python2__ in the first line of __ping-client__ file 
+* Add line __#!/usr/bin/python2__ in the first line of __ping-client__ file
 * Remove extension __.py__ from file name
 * Make file excutable with command __chomd +x ping-client__
 
