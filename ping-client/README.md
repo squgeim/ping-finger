@@ -23,7 +23,3 @@ Source code:
 ```bash
 $ python2 ping-client.py
 ```
-
-Submitted by:
-* JID: J00627938
-* Name: Deepak Adhikari
