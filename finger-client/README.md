@@ -5,7 +5,7 @@ Requirements:
 ```bash
 $ sudo apt-get install python-minimal # Or install python2.7 using any package manager
 $ cd finger-client
-$ chod +x finger-client # If the file is not executable
+$ chmod +x finger-client # If the file is not executable
 ```
 
 Executable
