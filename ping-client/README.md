@@ -5,7 +5,7 @@ Requirements:
 ```bash
 $ sudo apt-get install python-minimal # Or install python2.7 using any package manager
 $ cd ping-client
-$ chod +x ping-client # If the file is not executable
+$ chmod +x ping-client # If the file is not executable
 ```
 
 Executable:
